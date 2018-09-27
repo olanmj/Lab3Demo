@@ -41,7 +41,7 @@
         let now = moment();
         document.querySelector("#time").textContent = now.format('MMMM Do YYYY, h:mm:ss a');
         document.querySelector("#yearago").textContent = `A year ago it was ${now.subtract(1, 'years').calendar()}`;
-        document.querySelector("#diff").textContent = `Days since semester start: ${now.diff('2018-9-5', 'days')}`;
+        document.querySelector("#diff").textContent = `Days since semester start: ${moment().diff('2018-9-5', 'days')}`;
     </script>
 </body>
 </html>
