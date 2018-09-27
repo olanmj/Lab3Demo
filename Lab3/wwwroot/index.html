@@ -12,12 +12,36 @@
         <h3 id="time"></h3>
         <h3 id="yearago"></h3>
         <h3 id="diff"></h3>
+ 
+
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option value="0">Coffee</option>
+                <option value="0">Tea</option>
+                <option value="0">Coke</option>
+                <option value="0">Beer</option>
+                <option value="0">Wine</option>
+            </select>
+
+            
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+        </div>
+    </form>
     </div>
     <script>
         let now = moment();
         document.querySelector("#time").textContent = now.format('MMMM Do YYYY, h:mm:ss a');
         document.querySelector("#yearago").textContent = `A year ago it was ${now.subtract(1, 'years').calendar()}`;
-        document.querySelector("#diff").textContent = `Days since semester start: ${now.diff('2018-9-5' , 'days')}`;
+        document.querySelector("#diff").textContent = `Days since semester start: ${now.diff('2018-9-5', 'days')}`;
     </script>
 </body>
 </html>
